@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member only</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="script.js"></script>
+</head>
+<body background="images/blackblur.png">
+    <div id="upper-menu">
+        <h1>kaviAutomobiles.co.in</h1>
+    </div>
+    <h1 class="h1">Customer Details : </h1><hr>
+    <div id="list">
+    <ul>
+    <li><a id="cButton" onclick="modifyDetails(1)">Add Customer</a></li>
+    <li><a id="cButton" onclick="modifyDetails(2)">Remove Customer</a></li>
+    <li><a id="cButton" onclick="modifyDetails(3)">Update Customer</a></li>
+    </ul>
+    </div>
+    <form name="cRegisterForm" class="cRegister">
+        <fieldset class="fieldset"><legend><b>Customer 101 :</b></legend>
+        <ul>
+        <li><label>Vehicle Number :</label><br><input type="text" name="vNumber"></label></li>
+        <li><label>Owner Name<br><input type="text" name="ownerName"></label></li>
+        <li><label>Registered Date :<br><input type="date"></label></li>
+        <li><label>Next service date :<br><input type="date"></label></li>
+        </ul>
+    </fieldset>
+    </form>   
+    
+</body>
+</html>
