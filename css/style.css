@@ -78,6 +78,12 @@ body{
         width: 70%;
         height: 200px;
     }
+    
+    #list ul li{
+        font-size: 10px;
+        cursor:default;
+        display: inline;
+    }
 }
 @media screen and (min-width:501px) and (max-width:1023px){       /*  tablet  */
     #image-round img{
@@ -132,8 +138,6 @@ form.cRegister ul li{
     cursor:default;
     padding: 5px;
     display: inline;
-}
-#list ul li a:hover{
 }
 #list ul li #cButton:hover{
     font-size:larger;
