@@ -1,41 +1,39 @@
 function verify(){
     var n=document.forms["myForm"]["Mname"].value;
     var p=document.forms["myForm"]["Mpass"].value;
-    var para=document.getElementById('para');
     if(n=="KaviArasan" && p=="iamkavi"){
         window.open("member-only.html");
-        this.admin=1;
+        var mem_name=n;
+        localStorage.setItem("memberN",mem_name);
     }
-    if(n=="Rajan" && p=="iamrajan"){
+    else if(n=="Rajan" && p=="iamrajan"){
         window.open("member-only.html");
-        this.admin=0;
+        var mem_name=n;
+        localStorage.setItem("memberN",mem_name);
     }
     else{
-        const invalid="Member Name or Password Invalid !";
-        para.innerHTML=invalid;
+        alert("Invalid Member name or password !");
     }
 }
 var mn=document.getElementById("member-name");
-mn.innerHTML="Member Name : "+mem_name;
+mn.innerHTML="Member Name : " + localStorage.getItem("memberN");
 function modifyDetails(para){
-    var access_password=prompt("You need an access password to enter into this action.Enter the password right here : ");
-    if(access_password=="myaccess"){
-        switch (para) {
-            case 1:
-                window.open("add.html");
-                break;
-            case 2:
-                window.open("remove.html");
-                break;
-            case 3:
-                window.open("update.html");
-                break;
-            default:
-                alert("Sorry, Something went Wrong !");
-                break;
+    switch (para) {
+        case 1:
+            window.open("add.html");
+            break;
+        case 2:
+            window.open("remove.html");
+            break;
+        case 3:
+            window.open("update.html");
+            break;
+        default:
+            alert("Sorry, Something went Wrong !");
+            break;
         }
-    }
-    else{
-        alert("Hey, buddy! Go and meet the administrator.");
-    }
+}
+function getDate(){
+    var today = new Date();
+    document.getElementById("date").value = today.getFullYear()+'-'+('0'+(today.getMonth()+1)).slice(-2)+'-'('0'+today.getDate()).slice(-2);
 }
