@@ -10,6 +10,32 @@
         </script>
 </head>
 <body background="images/blackblur.png">
-   <p id="member-name"></p>
+    <div id="upper-menu">
+        <h1>kaviAutomobiles.co.in</h1>
+    </div>
+   <p id="member-name"></p><hr>
+   <fieldset id="field-2"><legend><h2>New Customer Registeration</h2></legend>
+   <form method="post">
+       <label>Customer Name </label>
+       <input type="text" name="name" id="name" spellcheck="true" class="input" required><br>
+       <label>Vehicle number </label>
+       <input type="text" name="vehicle-number" id="vehicle-number" class="input" required><br>
+       <label>Email</label>
+       <input type="email" name="email" id="email" class="input"><br>
+       <label>Date of Registeration</label>
+       <input type="date" id="date" name="date" onload="getDate()" class="input"><br>
+       <label>Date of Birth</label>
+       <input type="date" name="dob" id="dob" class="input" required><br>
+       <label>Age</label>
+       <input type="number" maxlength="2" minlength="2" name="" id="" class="input"><br>
+       <label>Aadhar number</label>
+       <input type="number" name="aNumber" id="aNumber" class="input" required><br>
+       <label>Mobile Number</label>
+       <input type="number" maxlength="10" minlength="10" name="mobile" class="input" required><br>
+       <input type="reset" style="float: left; padding: 5px;" value="Clear Form" id="clear">
+       <input type="submit" style="float: right; padding: 5px;" value="Register now" id="register-id" >
+   </form>
+   </fieldset>
+   <script src="script.js"></script>
 </body>
 </html>
