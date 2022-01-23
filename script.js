@@ -18,20 +18,7 @@ function verify(){
 var mn=document.getElementById("member-name");
 mn.innerHTML="Member Name : " + localStorage.getItem("memberN");
 function modifyDetails(para){
-    switch (para) {
-        case 1:
-            window.open("add.html");
-            break;
-        case 2:
-            window.open("remove.html");
-            break;
-        case 3:
-            window.open("update.html");
-            break;
-        default:
-            alert("Sorry, Something went Wrong !");
-            break;
-        }
+    window.open("add.html");      
 }
 function getDate(){
     var today = new Date();
